@@ -23,6 +23,6 @@ urlpatterns = [
     # Candidates app
     path('candidates/', include('candidates.urls')),
 
-    path('accounts/', include('django.contrib.auth.urls')),
-
+    # Django REST Framework
+    path('api/', include('api.urls'))
 ]
