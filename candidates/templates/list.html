@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if candidates %}
+    <div class="card-columns">
+        {% for candidate in candidates %}
+            {% include 'partials/card.html' %}
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-primary" role="alert">No candidates to display.</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col m-4">
+      <h2>{{ candidate.name }}</h2>
+      <hr>
+      <h5>Platform</h5>
+      <p>{{ candidate.platform|linebreaksbr }}</p>
+      <hr>
+      <h5>Accomplishments</h5>
+      <p>{{ candidate.accomplishments|linebreaksbr }}</p>
+      <hr>
+      <h5>Foreign Policy</h5>
+      <p>{{ candidate.foreign_policy|linebreaksbr }}</p>
+      <hr>
+      <h5>What sets {{ candidate.name }} apart</h5>
+      <p>{{ candidate.unique|linebreaksbr }}</p>
+      <hr>
+      <a href="{% url 'candidate-list-page' %}">All Candidates</a>
+    </div>
+  </div>
+{% endblock %}

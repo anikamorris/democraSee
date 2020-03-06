@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'candidates',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_LOGOUT_URL = '/'
+
+# Where to redirect during authentication
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -120,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Required for Heroku
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Set static root
+STATIC_ROOT = os.path.join(BASE_DIR, "static")

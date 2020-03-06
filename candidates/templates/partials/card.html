@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <h5 class="card-header ">{{ candidate.name }}</h5>
+    <div class="card-body border-dark">
+        <p class="card-text text-dark">
+            {% if candidate.platform %}
+                {{ candidate.platform|truncatewords_html:30 }}
+            {% else %}
+                {{ candidate.name }} needs more info.
+            {% endif %}
+        <hr>
+        {% if candidate.is_active %}
+            <div class="text-right"><a href="{% url 'candidate-detail-page' candidate.slug %}" title="Learn More">Learn More</a></div>
+        {% else %}
+            <div class="text-right">Dropped Out</div>
+            <div class="text-right"><a href="{% url 'candidate-detail-page' candidate.slug %}" title="Learn More">Learn More</a></div>
+        {% endif %}
+        
+    </div>
+</div>
