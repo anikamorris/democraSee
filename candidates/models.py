@@ -10,7 +10,6 @@ class Candidate(models.Model):
     platform = models.TextField(null=True)
     foreign_policy = models.TextField(null=True)
     unique = models.TextField(verbose_name="what sets this candidate apart", null=True)
-    total_contributions = models.IntegerField(verbose_name="total independent contributions", default=0)
     is_active = models.BooleanField(verbose_name="is this candidate still in the race", default=True)
     candidate_id = models.CharField(max_length=100, default="")
     slug = models.CharField(max_length=100, blank=True, editable=False)

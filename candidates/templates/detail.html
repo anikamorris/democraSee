@@ -17,6 +17,8 @@
       <h5>What sets {{ candidate.name }} apart</h5>
       <p>{{ candidate.unique|linebreaksbr }}</p>
       <hr>
+      <h3>Funds</h3>
+      <p>Total contributions: {{ total_contributions }}</p>
       <a href="{% url 'candidate-list-page' %}">All Candidates</a>
     </div>
   </div>

@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
+import requests
 
 from candidates.models import Candidate
 
@@ -21,7 +22,19 @@ class CandidateDetailView(DetailView):
 
     def get(self, request, slug):
         candidate = self.get_queryset().get(slug__iexact=slug)
-        data = request.get(f"https://api.open.fec.gov/v1/candidates?api_key=65AZmfF2NYsVgkfOfWN6gWVHTMbFqhZyBjYUUzEc&{candidate.candidate_id}")
+        response = requests.get(f"https://api.open.fec.gov/v1/candidate/{candidate.candidate_id}/totals?api_key=65AZmfF2NYsVgkfOfWN6gWVHTMbFqhZyBjYUUzEc&")
+        if response.status_code == 200:
+            data = response.json()["results"][0]
+            print(data)
+            contributions = data["contributions"]
+            individual_contributions = data["individual_contributions"]
+            small_donations = data["individual_unitemized_contributions"]
+            large_donations = data["individual_itemized_contributions"]
+        
         return render(request, 'detail.html', {
-            'candidate': candidate
+            'candidate': candidate,
+            'total_contributions': contributions,
+            'individual_contributions': individual_contributions,
+            'small_donations': small_donations,
+            'large_donations': large_donations
         })
