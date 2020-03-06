@@ -20,7 +20,7 @@ class Candidate(models.Model):
     def get_absolute_url(self):
         """ Returns a fully-qualified path for a page (/candidate-name). """
         path_components = {'slug': self.slug}
-        return reverse('wiki-details-page', kwargs=path_components)
+        return reverse('candidate-detail-page', kwargs=path_components)
 
     def save(self, *args, **kwargs):
         """ Creates a URL safe slug automatically when a new a page is created. """
