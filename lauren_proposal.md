@@ -52,6 +52,7 @@ Team @Anika Morris
 
 ## Wireframes
 
+![wireframe](https://user-images.githubusercontent.com/53276049/76808581-6fbacf80-67a5-11ea-91cf-262274d897be.jpeg)
 
 
 
