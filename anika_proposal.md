@@ -16,7 +16,7 @@ Dates 3/16-3/25
 
 ## Description
 
-**DemocraSee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidates most closely align with your views, a financial contribution tracker for each candidate, and a notification system to ensure voters are prepared on Election Day. **
+**DemocraSee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidates most closely align with your views, a financial contribution tracker for each candidate, and a notification system to ensure voters are prepared on Election Day.**
 
 ## Challenges I Anticipate
 
