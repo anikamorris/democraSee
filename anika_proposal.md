@@ -16,7 +16,7 @@ Dates 3/16-3/25
 
 ## Description
 
-**DemocraSee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidates most closely align with your views, a financial contribution tracker for each candidate, and a notification system to ensure voters are prepared on Election Day. **
+**DemocraSee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidates most closely align with your views, a financial contribution tracker for each candidate, a page to track which candidates you're voting for, and a notification system to ensure voters are prepared on Election Day.**
 
 ## Challenges I Anticipate
 
@@ -39,18 +39,16 @@ Dates 3/16-3/25
 
 ## Personal Achievement Goals:
 
-**Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
-
 ### Teammate 1: Anika
 
-1. Goal 1
-1. Goal 2
-1. Goal 3
+1. Maintain efficient collaboration through clear and concise communication
+1. Achieve better understanding of Django framework
+1. Minimize git conflicts with effective use of branching
 
 
 ## Wireframes
 
-**Insert wireframe pictures here**
+![IMG_0651](https://user-images.githubusercontent.com/29615757/76796597-0927b880-6789-11ea-9346-449e20af50d9.jpg)
 
 
 ## Evaluation
@@ -69,13 +67,13 @@ Dates 3/16-3/25
 
 
 ## Approval Checklist
-- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
-- [ ] I have completed all the necessary parts of this proposal
-- [ ] I linked my proposal in the Spring Intensive Tracker
+- [x] If I have a team project, I wrote this proposal to represent my work and only my work
+- [x] I have completed all the necessary parts of this proposal
+- [x] I linked my proposal in the Spring Intensive Tracker
 
 ### Sign off
 
 **Student Name: Anika Morris**                
-> Anika / 03/16/20
+> Anika Morris / 03/16/20
 **Make School Advisor Name**
 > TBD
