@@ -21,19 +21,6 @@ class CandidateListViewTests(TestCase):
     def test_multiple_candidates(self):
         # Make some test data to be displayed on the page.
 
-        Candidate.objects.create(name="Bernie Sanders", 
-            accomplishments="Test",
-            platform="Test",
-            foreign_policy="Test",
-            unique="Test",
-            candidate_id="P0000")
-    
-        Candidate.objects.create(name="Elizabeth Warren", 
-            accomplishments="Test",
-            platform="Test",
-            foreign_policy="Test",
-            unique="Test",
-            candidate_id="P0000")
 
         # Issue a GET request to homepage.
         response = self.client.get('/candidates/')
