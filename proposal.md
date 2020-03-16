@@ -1,4 +1,81 @@
-# Proposal
+# Junior Spring Intensive Deliverable Proposal
 
-I'm going to build an informative website that helps people keep track of the Democratic primary field.
-I want to give information on each candidate, including their history, domestic policy platform, foreign policy platform, and funding. I'll be using the FEC's OpenFEC API to get data on each candidate's cash on hand, small dollar donations, and large dollar donations. 
+Dates 3/16-3/25
+
+**My Name: Anika Morris** 
+
+
+**Project Name: DemocraSee** 
+
+
+**Old Project**
+
+
+**Team Project**
+
+
+## Description
+
+**DemocraSee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidates most closely align with your views, a financial contribution tracker for each candidate, and a notification system to ensure voters are prepared on Election Day. **
+
+## Challenges I Anticipate
+
+1. **Implementing quiz logic**
+2. **Potential merge conflicts**
+3. **Displaying data visually**
+4. **Finding unbiased candidate content**
+
+## Skateboard
+
+**OpenFEC API implemented and candidate data displayed.** 
+
+## Bike
+
+**Allow each user CRUD functionality for candidates (i.e. a "my candidates" page).** 
+
+## Car
+
+**Quiz to determine political preference.**
+
+## Personal Achievement Goals:
+
+**Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
+
+### Teammate 1: Anika
+
+1. Goal 1
+1. Goal 2
+1. Goal 3
+
+
+## Wireframes
+
+**Insert wireframe pictures here**
+
+
+## Evaluation
+
+**You must meet the following criteria in order to pass the intensive:**
+
+- Students must get proposal approved before starting the project to pass
+- SOLO 
+    - must score an average above a 2.5 on the [rubric]
+- TEAM 
+    - Must score an average above 3 on the [rubric]
+    - Each individual completes 2 of the 3 personal achievement goals from their proposal
+- Pitch your product
+
+[rubric]:https://docs.google.com/document/d/1IOQDmohLBEBT-hyr-2vgw1mbZUNsq3fHxVfH0oRmVt0/edit
+
+
+## Approval Checklist
+- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
+- [ ] I have completed all the necessary parts of this proposal
+- [ ] I linked my proposal in the Spring Intensive Tracker
+
+### Sign off
+
+**Student Name: Anika Morris**                
+> Anika / 03/16/20
+**Make School Advisor Name**
+> TBD
