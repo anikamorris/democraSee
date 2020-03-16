@@ -44,15 +44,15 @@ Team @Anika Morris
 ### Teammate 1
 
 1. Manage time adaquately to build all features 
-2. Effectively colaborate with teamate to reach goals
-3. Increase my knowledge and understanding of the democratic process
+2. Get CRUD functionality working to allow a MyCandidate page
+3. Implement the quiz and the logic behind it.
 
 
 
 
 ## Wireframes
 
-**Insert wireframe pictures here**
+
 
 
 ## Evaluation
