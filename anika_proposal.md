@@ -43,7 +43,7 @@ Dates 3/16-3/25
 
 1. Maintain efficient collaboration through clear and concise communication
 1. Achieve better understanding of Django framework
-1. Minimize git conflicts with branching
+1. Minimize git conflicts with effective use of branching
 
 
 ## Wireframes
