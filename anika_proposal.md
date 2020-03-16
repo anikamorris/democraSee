@@ -39,13 +39,11 @@ Dates 3/16-3/25
 
 ## Personal Achievement Goals:
 
-**Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
-
 ### Teammate 1: Anika
 
-1. Goal 1
-1. Goal 2
-1. Goal 3
+1. Maintain efficient collaboration through clear and concise communication
+1. Achieve better understanding of Django framework
+1. Minimize git conflicts with branching
 
 
 ## Wireframes
@@ -76,6 +74,6 @@ Dates 3/16-3/25
 ### Sign off
 
 **Student Name: Anika Morris**                
-> Anika / 03/16/20
+> Anika Morris / 03/16/20
 **Make School Advisor Name**
 > TBD
