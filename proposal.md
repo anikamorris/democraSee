@@ -1,4 +1,4 @@
-# Juniors Spring Intensive Deliverable Proposal
+# Junior Spring Intensive Deliverable Proposal
 
 Dates 3/16-3/25
 
@@ -20,10 +20,10 @@ Dates 3/16-3/25
 
 ## Challenges I Anticipate
 
-**Implementing quiz logic**
-**Potential merge conflicts**
-**Displaying data visually**
-**Finding unbiased candidate content**
+1. **Implementing quiz logic**
+2. **Potential merge conflicts**
+3. **Displaying data visually**
+4. **Finding unbiased candidate content**
 
 ## Skateboard
 
