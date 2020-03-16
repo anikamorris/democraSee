@@ -1,8 +1,9 @@
+import requests
+
 from django.shortcuts import render, HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
-import requests
 
 from candidates.models import Candidate
 
