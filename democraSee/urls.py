@@ -24,5 +24,9 @@ urlpatterns = [
     path('candidates/', include('candidates.urls')),
 
     # Django REST Framework
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    
+     # Authentication
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
