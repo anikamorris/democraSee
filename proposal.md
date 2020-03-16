@@ -27,17 +27,13 @@ Dates 3/16-3/25
 
 ## Skateboard
 
-**ONE SINGLE aspect of product. Consider: build backend for SPD 1.2 front end, CRUD one resource, use API or library, authentication etc.**
-
 **OpenFEC API implemented and candidate data displayed.** 
 
 ## Bike
-**ONE additional features that get you closer to your idealized product. Examples: CRUD 2nd resource, add comments, API use, authentication, library use** 
 
 **Allow each user CRUD functionality for candidates (i.e. a "my candidates" page).** 
 
 ## Car
-**ONE additional feature** 
 
 **Quiz to determine political preference.**
 
