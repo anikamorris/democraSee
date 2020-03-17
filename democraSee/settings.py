@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     'rest_framework',
+    'accounts',
     'candidates',
 ]
 
@@ -57,7 +59,9 @@ ROOT_URLCONF = 'democraSee.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

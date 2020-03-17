@@ -18,23 +18,23 @@ Team @Anika Morris
 
 ## Description
 
-**Democrasee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidate most closely aligns with your views, a finacial contribution tracker for each candidate, notification system to ensure voter preperation on election day.  **
+**Democrasee is a one stop shop for all things related to voter information. Our goal is to increase transparency and demistify the democratic process by giving an unbiased view of each candidate's platform, funding, and history. Our features include a quiz to determine political preference including which candidate most closely aligns with your views, a finacial contribution tracker for each candidate, notification system to ensure voter preperation on election day.**
 
 ## Challenges I Anticipate
 
-** Implementing quiz logic, potential merge conflicts, displaying data visually, finding unbiased candidate content **
+**Implementing quiz logic, potential merge conflicts, displaying data visually, finding unbiased candidate content**
 
 ## Skateboard
 
-** OpenFEC API implemented and candidate data displayed.**
+**OpenFEC API implemented and candidate data displayed.**
 
 **Start coding and finish “Skateboard” feature before beginning “Bike”.** 
 
 ## Bike
-** Allow each user CRUD functionality for candidates** 
+**Allow each user CRUD functionality for candidates** 
 
 ## Car
-** Quiz to determine political preference** 
+**Quiz to determine political preference** 
 
 
 ## Personal Achievement Goals:
@@ -44,15 +44,16 @@ Team @Anika Morris
 ### Teammate 1
 
 1. Manage time adaquately to build all features 
-2. Effectively colaborate with teamate to reach goals
-3. Increase my knowledge and understanding of the democratic process
+2. Get CRUD functionality working to allow a MyCandidate page
+3. Implement the quiz and the logic behind it.
 
 
 
 
 ## Wireframes
 
-**Insert wireframe pictures here**
+![wireframe](https://user-images.githubusercontent.com/53276049/76808581-6fbacf80-67a5-11ea-91cf-262274d897be.jpeg)
+
 
 
 ## Evaluation

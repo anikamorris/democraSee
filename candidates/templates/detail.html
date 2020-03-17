@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block content %}
-  <div class="row">
+  <div class="row pb-5">
     <div class="col m-4">
       <h2>{{ candidate.name }}</h2>
       <hr>
@@ -18,7 +19,7 @@
       <p>{{ candidate.unique|linebreaksbr }}</p>
       <hr>
       <h3>Funds</h3>
-      <p>Total contributions: {{ total_contributions }}</p>
+      <p>Total contributions: ${{ total_contributions|intcomma }}</p>
       <a href="{% url 'candidate-list-page' %}">All Candidates</a>
     </div>
   </div>

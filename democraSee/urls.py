@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from candidates.views import CandidateListView
+
 urlpatterns = [
     # Admin site
     path('admin/', admin.site.urls),
@@ -24,5 +26,11 @@ urlpatterns = [
     path('candidates/', include('candidates.urls')),
 
     # Django REST Framework
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    
+     # Authentication
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
+
+    path('', CandidateListView.as_view(), name='home'),
 ]
