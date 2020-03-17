@@ -25,7 +25,7 @@ class CandidateDetailView(DetailView):
 
     def get(self, request, slug):
         candidate = self.get_queryset().get(slug__iexact=slug)
-        response = requests.get(f"https://api.open.fec.gov/v1/candidate/{candidate.candidate_id}/totals?api_key=65AZmfF2NYsVgkfOfWN6gWVHTMbFqhZyBjYUUzEc&")
+        response = requests.get(f"https://api.open.fec.gov/v1/candidate/{candidate.candidate_id}/totals?api_key=65AZmfF2NYsVgkfOfWN6gWVHTMbFqhZyBjYUUzEc&cycle=2020")
         if response.status_code == 200:
             data = response.json()["results"][0]
             print(data)
