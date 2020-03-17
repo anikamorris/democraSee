@@ -43,3 +43,5 @@ class CandidateDetailView(DetailView):
             'small_donations': small_donations,
             'large_donations': large_donations
         })
+
+

@@ -29,3 +29,4 @@ class Candidate(models.Model):
 
         # Call save on the superclass.
         return super(Candidate, self).save(*args, **kwargs)
+
