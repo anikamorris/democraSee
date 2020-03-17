@@ -43,3 +43,11 @@ class CandidateDetailView(DetailView):
         })
 
 
+class MyCandidatesListView(ListView):
+    model = Candidate
+
+    def get(self, request):
+        candidates = self.get_queryset().all()
+        return render(request, 'myCandidates.html', {
+            'candidates': candidates
+        })
