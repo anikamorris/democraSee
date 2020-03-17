@@ -7,6 +7,10 @@ from django.views.generic import ListView, DetailView
 
 from candidates.models import Candidate
 
+class IndexView(ListView):
+    def get(self, request):
+        return render(request, 'index.html')
+
 
 class CandidateListView(ListView):
     model = Candidate

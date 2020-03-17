@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-from candidates.views import CandidateListView
+from django.conf import settings
+from django.conf.urls.static import static
+from candidates.views import IndexView
 
 urlpatterns = [
     # Admin site
@@ -31,6 +32,6 @@ urlpatterns = [
      # Authentication
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
-
-    path('', CandidateListView.as_view(), name='home'),
-]
+    # Home page
+    path('', IndexView.as_view(), name='home'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
