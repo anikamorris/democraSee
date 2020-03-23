@@ -23,6 +23,9 @@ urlpatterns = [
     # Admin site
     path('admin/', admin.site.urls),
 
+    #Quiz app
+    path('quiz/', include('quiz.urls')),
+
     # Candidates app
     path('candidates/', include('candidates.urls')),
 

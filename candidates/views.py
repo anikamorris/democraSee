@@ -12,6 +12,7 @@ class IndexView(ListView):
         return render(request, 'index.html')
 
 
+
 class CandidateListView(ListView):
     model = Candidate
 
