@@ -41,10 +41,9 @@ Dates 3/16-3/25
 
 ### Teammate 1: Anika
 
+1. Display information about each candidate's funding
 1. Allow users to add candidates
 1. Create an intuitive UI
-1. Minimize git conflicts with effective use of branching
-
 
 ## Wireframes
 
