@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{%block content %}
+
+<form action="{% url 'quiz:results'  %}" method="post" accept-charset="utf-8">
+    {% csrf_token %}
+{% for question in questions %}
+
+<li> <a href="{% url 'quiz:detail' question.id %}"></a>{{ question.question_text }}</a></li>
+<li>{{form}}</li>
+{% endfor %}
+
+    <p><input type="submit" value="Done &rarr;"></p>
+</form>
+
+
+
+{% endblock %}
+
