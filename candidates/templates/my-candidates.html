@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>President</h2>
+    {% for candidate in candidates %}
+        <h2>{{ candidate.name }}</h2>
+    {% endfor %}
+{% endblock %}

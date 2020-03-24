@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.urls import reverse
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 
 class Candidate(models.Model):
@@ -30,3 +31,10 @@ class Candidate(models.Model):
         # Call save on the superclass.
         return super(Candidate, self).save(*args, **kwargs)
 
+
+class AddedCandidate(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.__str__() + " > " + self.candidate.name

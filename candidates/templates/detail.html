@@ -2,8 +2,14 @@
 {% load humanize %}
 
 {% block content %}
+<div class="container">
   <div class="row pb-5">
     <div class="col m-4">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Candidate</button>
+      </form>
       <h2>{{ candidate.name }}</h2>
       <hr>
       <h5>Platform</h5>
@@ -18,9 +24,13 @@
       <h5>What sets {{ candidate.name }} apart</h5>
       <p>{{ candidate.unique|linebreaksbr }}</p>
       <hr>
-      <h3>Funds</h3>
+      <!-- <h3>Funds</h3>
       <p>Total contributions: ${{ total_contributions|intcomma }}</p>
+      <p>Small dollar contributions (less than $200): ${{ small_donations|intcomma }}</p>
+      <p>Large dollar contributions (more than $200): ${{ large_donations|intcomma }}</p> -->
+
       <a href="{% url 'candidate-list-page' %}">All Candidates</a>
     </div>
   </div>
+</div>
 {% endblock %}

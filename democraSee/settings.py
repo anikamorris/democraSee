@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
 
+    'django_mysql',
     'rest_framework',
     'accounts',
     'candidates',
