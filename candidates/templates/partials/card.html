@@ -1,19 +1,19 @@
-<div class="card mb-3">
-    <h5 class="card-header ">{{ candidate.name }}</h5>
-    <div class="card-body border-dark">
-        <p class="card-text text-dark">
-            {% if candidate.platform %}
-                {{ candidate.platform|truncatewords_html:30 }}
-            {% else %}
-                {{ candidate.name }} needs more info.
-            {% endif %}
-        <hr>
+<a href="{% url 'candidate-detail-page' candidate.slug %}" title="Learn More">
+    <div class="card mb-3">
         {% if candidate.is_active %}
-            <div class="text-right"><a href="{% url 'candidate-detail-page' candidate.slug %}" title="Learn More">Learn More</a></div>
+            <img class="card-img-top" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential">
+            <h5 class="card-header" style="color: black">{{ candidate.name }}</h5>
         {% else %}
-            <div class="text-right">Dropped Out</div>
-            <div class="text-right"><a href="{% url 'candidate-detail-page' candidate.slug %}" title="Learn More">Learn More</a></div>
+            <img class="card-img-top dropped-out" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential" style="filter: grayscale(100%);">
+            <h5 class="card-header" style="color: black">{{ candidate.name }} (Dropped Out)</h5>
         {% endif %}
-        
+        <div class="card-body border-dark">
+            <p class="card-text text-dark">
+                {% if candidate.platform %}
+                    {{ candidate.platform|truncatewords_html:30 }}
+                {% else %}
+                    {{ candidate.name }} needs more info.
+                {% endif %}
+        </div>
     </div>
-</div>
+</a>

@@ -2,25 +2,37 @@
 {% load humanize %}
 
 {% block content %}
-  <div class="row pb-5">
-    <div class="col m-4">
-      <h2>{{ candidate.name }}</h2>
-      <hr>
-      <h5>Platform</h5>
-      <p>{{ candidate.platform|linebreaksbr }}</p>
-      <hr>
-      <h5>Accomplishments</h5>
-      <p>{{ candidate.accomplishments|linebreaksbr }}</p>
-      <hr>
-      <h5>Foreign Policy</h5>
-      <p>{{ candidate.foreign_policy|linebreaksbr }}</p>
-      <hr>
-      <h5>What sets {{ candidate.name }} apart</h5>
-      <p>{{ candidate.unique|linebreaksbr }}</p>
-      <hr>
-      <h3>Funds</h3>
-      <p>Total contributions: ${{ total_contributions|intcomma }}</p>
-      <a href="{% url 'candidate-list-page' %}">All Candidates</a>
+<div class="container">
+    <div class="row pb-5">
+        <div class="col m-4">
+            <div class="d-inline">
+                <h2 class="mb-3">{{ candidate.name }}  ({{ candidate.party }})</h2>
+            </div>
+            <div class="d-inline">
+                <form method="POST" class="form-inline">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn-outline-dark" type="submit" style="border-radius: 5px">Add Candidate</button>
+                </form>
+            </div>
+            <hr>
+            <h5>Platform</h5>
+            <p>{{ candidate.platform|linebreaksbr }}</p>
+            <hr>
+            <h5>Accomplishments</h5>
+            <p>{{ candidate.accomplishments|linebreaksbr }}</p>
+            <hr>
+            <h5>Foreign Policy</h5>
+            <p>{{ candidate.foreign_policy|linebreaksbr }}</p>
+            <hr>
+            <h5>What sets {{ candidate.name }} apart</h5>
+            <p>{{ candidate.unique|linebreaksbr }}</p>
+            <hr>
+            <!-- <h3>Funds</h3>
+            <p>Total contributions: ${{ total_contributions|intcomma }}</p>
+            <p>Small dollar contributions (less than $200): ${{ small_donations|intcomma }}</p>
+            <p>Large dollar contributions (more than $200): ${{ large_donations|intcomma }}</p> -->
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}

@@ -2,9 +2,20 @@
 
 {% block content %}
 {% if candidates %}
-    <div class="card-columns">
+    <h2>Democrats</h2>
+    <div class="card-columns mt-4 mb-4">
         {% for candidate in candidates %}
-            {% include 'partials/card.html' %}
+            {% if candidate.party == "D" %}
+                {% include 'partials/card.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    <h2>Republicans</h2>
+    <div class="card-columns mt-4 mb-5">
+        {% for candidate in candidates %}
+            {% if candidate.party == "R" %}
+                {% include 'partials/card.html' %}
+            {% endif %}
         {% endfor %}
     </div>
 {% else %}
