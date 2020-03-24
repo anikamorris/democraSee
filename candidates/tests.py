@@ -20,7 +20,23 @@ class CandidateTestCase(TestCase):
 class CandidateListViewTests(TestCase):
     def test_multiple_candidates(self):
         # Make some test data to be displayed on the page.
+        candidate = Candidate(name="Bernie Sanders", 
+            accomplishments="Test",
+            platform="Test",
+            foreign_policy="Test",
+            unique="Test",
+            candidate_id="P0000"
+        )
+        candidate.save()
 
+        candidate2 = Candidate(name="Joe Biden", 
+            accomplishments="Test",
+            platform="Test",
+            foreign_policy="Test",
+            unique="Test",
+            candidate_id="P0000"
+        )
+        candidate2.save()
 
         # Issue a GET request to homepage.
         response = self.client.get('/candidates/')
@@ -35,6 +51,6 @@ class CandidateListViewTests(TestCase):
 
         self.assertQuerysetEqual(
             responses,
-            ['<Candidate: Bernie Sanders>', '<Candidate: Elizabeth Warren>'],
+            ['<Candidate: Bernie Sanders>', '<Candidate: Joe Biden>'],
             ordered=False
         )
