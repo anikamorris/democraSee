@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 class Candidate(models.Model):
     name = models.CharField(max_length=100, default="")
+    image_link = models.CharField(max_length=500, null=True)
     accomplishments = models.TextField(null=True)
     platform = models.TextField(null=True)
     foreign_policy = models.TextField(null=True)

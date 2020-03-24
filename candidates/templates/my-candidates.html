@@ -1,14 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for added_candidate in candidates %}
-        <h2>{{ added_candidate.candidate.name }}</h2>
-    {% endfor %}
-    <!-- {% if candidates %}
-        {% for candidate in candidates %}
-            <h2>{{ candidate.name }}</h2>
-        {% endfor %}
+    {% if candidates %}
+        <h2>President: {{ candidates.last.candidate.name }}</h2>
     {% else %}
         <h2>You have no candidates yet!</h2>
-    {% endif %} -->
+    {% endif %}
+    <a href="{% url 'candidate-list-page' %}">All Candidates</a>
 {% endblock %}
