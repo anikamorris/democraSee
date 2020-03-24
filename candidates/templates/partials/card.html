@@ -4,7 +4,7 @@
             <img class="card-img-top" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential">
             <h5 class="card-header" style="color: black">{{ candidate.name }}</h5>
         {% else %}
-            <img class="card-img-top dropped-out" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential">
+            <img class="card-img-top dropped-out" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential" style="filter: grayscale(100%);">
             <h5 class="card-header" style="color: black">{{ candidate.name }} (Dropped Out)</h5>
         {% endif %}
         <div class="card-body border-dark">

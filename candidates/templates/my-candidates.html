@@ -2,9 +2,10 @@
 
 {% block content %}
     {% if candidates %}
-        <h2>President: {{ candidates.last.candidate.name }}</h2>
+        <h2>President:</h2>
+        {% include 'partials/candidate-card.html' with candidate=candidates.last.candidate %}
     {% else %}
         <h2>You have no candidates yet!</h2>
     {% endif %}
-    <a href="{% url 'candidate-list-page' %}">All Candidates</a>
+    <hr>
 {% endblock %}

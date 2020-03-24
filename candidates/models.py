@@ -15,6 +15,7 @@ class Candidate(models.Model):
     is_active = models.BooleanField(verbose_name="is this candidate still in the race", default=True)
     candidate_id = models.CharField(max_length=100, default="")
     slug = models.CharField(max_length=100, blank=True, editable=False)
+    party = models.CharField(max_length=1, null=True)
 
     def __str__(self):
         return self.name
