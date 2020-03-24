@@ -1,0 +1,14 @@
+<div class="card mb-5">
+    {% if candidate.is_active %}
+        <img class="card-img-top" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential">
+    {% else %}
+        <img class="card-img-top dropped-out" src="{{ candidate.image_link }}" alt="{{ candidate.name }} looking presidential" style="filter: grayscale(100%);">
+    {% endif %}
+    <div class="card-body border-dark">
+        <p class="card-text text-dark">
+            {{ candidate.platform|linebreaksbr }}
+            {{ candidate.accomplishments|linebreaksbr }}
+            {{ candidate.foreign_policy|linebreaksbr }}
+            {{ candidate.unique|linebreaksbr }}
+    </div>
+</div>

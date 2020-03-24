@@ -2,10 +2,12 @@ from django.db import models
 from django.conf import settings
 from django.urls import reverse
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 
 class Candidate(models.Model):
     name = models.CharField(max_length=100, default="")
+    image_link = models.CharField(max_length=500, null=True)
     accomplishments = models.TextField(null=True)
     platform = models.TextField(null=True)
     foreign_policy = models.TextField(null=True)
@@ -13,6 +15,7 @@ class Candidate(models.Model):
     is_active = models.BooleanField(verbose_name="is this candidate still in the race", default=True)
     candidate_id = models.CharField(max_length=100, default="")
     slug = models.CharField(max_length=100, blank=True, editable=False)
+    party = models.CharField(max_length=1, null=True)
 
     def __str__(self):
         return self.name
@@ -30,3 +33,10 @@ class Candidate(models.Model):
         # Call save on the superclass.
         return super(Candidate, self).save(*args, **kwargs)
 
+
+class AddedCandidate(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    candidate = models.ForeignKey(Candidate, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.__str__() + " > " + self.candidate.name
