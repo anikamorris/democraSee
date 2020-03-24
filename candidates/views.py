@@ -25,22 +25,22 @@ class CandidateDetailView(DetailView):
     def get(self, request, slug):
         form = CandidateForm()
         candidate = self.get_queryset().get(slug__iexact=slug)
-        # response = requests.get(f"https://api.open.fec.gov/v1/candidate/{candidate.candidate_id}/totals?api_key=1WDqCtwIBBG2cDDZKnNScUunIeLC6FKH0MPGqfOZ&cycle=2020")
-        # if response.status_code == 200:
-        #     data = response.json()["results"][0]
-        #     print(data)
-        #     contributions = data["contributions"]
-        #     individual_contributions = data["individual_contributions"]
-        #     small_donations = data["individual_unitemized_contributions"]
-        #     large_donations = data["individual_itemized_contributions"]
+        response = requests.get(f"http://api.open.fec.gov/v1/candidate/{candidate.candidate_id}/totals?api_key=1WDqCtwIBBG2cDDZKnNScUunIeLC6FKH0MPGqfOZ&cycle=2020")
+        if response.status_code == 200:
+            data = response.json()["results"][0]
+            print(data)
+            contributions = data["contributions"]
+            individual_contributions = data["individual_contributions"]
+            small_donations = data["individual_unitemized_contributions"]
+            large_donations = data["individual_itemized_contributions"]
         
         return render(request, 'detail.html', {
             'form': form,
             'candidate': candidate,
-            # 'total_contributions': contributions,
-            # 'individual_contributions': individual_contributions,
-            # 'small_donations': small_donations,
-            # 'large_donations': large_donations
+            'total_contributions': contributions,
+            'individual_contributions': individual_contributions,
+            'small_donations': small_donations,
+            'large_donations': large_donations
         })
 
     def post(self, request, slug):
