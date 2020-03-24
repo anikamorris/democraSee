@@ -25,8 +25,7 @@ SECRET_KEY = 'nh-1+s4++ww4umuxizw_i54pz@m@ctakkv--9@kw8hi!+1b2()'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'democrasee.herokuapp.com']
 
 # Application definition
 
@@ -38,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+<<<<<<< HEAD
     'quiz',
     'rest_framework',
+=======
+
+>>>>>>> 56668c765c2db05ab4a01d14a3b1342c0b27e8b4
     'accounts',
     'candidates',
 ]
