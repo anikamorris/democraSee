@@ -2,7 +2,7 @@
 
 {% block content %}
     {% if candidates %}
-        <h2>President:</h2>
+        <h2>President: {{ candidates.last.candidate.name }} ({{ candidates.last.candidate.party }})</h2>
         {% include 'partials/candidate-card.html' with candidate=candidates.last.candidate %}
     {% else %}
         <h2>You have no candidates yet!</h2>
