@@ -37,14 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-<<<<<<< HEAD
-    'quiz',
-    'rest_framework',
-=======
-
->>>>>>> 56668c765c2db05ab4a01d14a3b1342c0b27e8b4
     'accounts',
     'candidates',
+    'quiz'
 ]
 
 MIDDLEWARE = [
