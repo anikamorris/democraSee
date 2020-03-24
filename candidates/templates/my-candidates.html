@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
-    <h2>President</h2>
-    {% for candidate in candidates %}
-        <h2>{{ candidate.name }}</h2>
+    {% for added_candidate in candidates %}
+        <h2>{{ added_candidate.candidate.name }}</h2>
     {% endfor %}
+    <!-- {% if candidates %}
+        {% for candidate in candidates %}
+            <h2>{{ candidate.name }}</h2>
+        {% endfor %}
+    {% else %}
+        <h2>You have no candidates yet!</h2>
+    {% endif %} -->
 {% endblock %}

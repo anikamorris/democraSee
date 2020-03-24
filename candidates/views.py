@@ -60,7 +60,8 @@ class MyCandidatesListView(ListView):
 
     def get(self, request):
         user = request.user
-        candidates = self.get_queryset().all()
+        candidates = self.get_queryset().filter(user=user)
+        print(candidates)
         return render(request, 'my-candidates.html', {
             'candidates': candidates
         })
