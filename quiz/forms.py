@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from quiz.models import *
 from .models import Choice
+from django.forms import CheckboxSelectMultiple
 
 
 class QuizForm(forms.ChoiceField):
@@ -11,12 +12,16 @@ class QuizForm(forms.ChoiceField):
             self.choices = ((None,'Select a response'),('Agree','Agree'),('Disagree','Disagree'))
         
 class SecondQuizForm(forms.Form):
-    Model = Choice
+    Model = Question
     options = [
     ('Agree', 'Agree'),
     ('Disagree', 'Disagree')
     ]
-    response = forms.CharField(label='Please answer the following',  widget=forms.RadioSelect(choices=options))
+    response = forms.MultipleChoiceField(
+        required=True,
+        widget=forms.CheckboxSelectMultiple,
+        choices=options,
+    )
     
     def quiz_forms(self,data=None):
         questions = Question.objects.all()
