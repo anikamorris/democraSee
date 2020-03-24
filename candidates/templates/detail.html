@@ -5,12 +5,16 @@
 <div class="container">
     <div class="row pb-5">
         <div class="col m-4">
-            <span><h2 class="mb-3">{{ candidate.name }}  ({{ candidate.party }})</h2></span>
-            <form method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Add Candidate</button>
-            </form>
+            <div class="d-inline">
+                <h2 class="mb-3">{{ candidate.name }}  ({{ candidate.party }})</h2>
+            </div>
+            <div class="d-inline">
+                <form method="POST" class="form-inline">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn-outline-dark" type="submit" style="border-radius: 5px">Add Candidate</button>
+                </form>
+            </div>
             <hr>
             <h5>Platform</h5>
             <p>{{ candidate.platform|linebreaksbr }}</p>
